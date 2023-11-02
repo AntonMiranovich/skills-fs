@@ -6,10 +6,10 @@ function isValidSkillsId(req, res, next) {
 }
 
 function isValidSkillsData(req, res, next) {
-    const { title } = req.body;
-    if (!isNaN(id)) throw new Error('title ту может быть числом');
-    if (!title) throw new Error('значени title пустое');
-    next();
-  }
+  const { title } = req.body;
+  if (!isNaN(title)) throw new Error('title ту может быть числом');
+  if (!title) throw new Error('значени title пустое');
+  next();
+}
 
-module.exports = { isValidSkillsId,isValidSkillsData };
+module.exports = { isValidSkillsId, isValidSkillsData };
